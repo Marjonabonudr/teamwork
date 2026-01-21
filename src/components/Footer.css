@@ -80,20 +80,57 @@
   color: #1A202C;
 }
 
-/* Mobil qurilmalar uchun moslashuvchanlik */
-@media (max-width: 768px) {
-  .footer-top {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
+/* Planshet va kichik noutbuklar uchun (992px gacha) */
+@media (max-width: 992px) {
   .footer-links-container {
-    flex-wrap: wrap;
     gap: 40px;
-  }
-  
-  .footer-bottom {
-    flex-direction: column-reverse;
-    align-items: flex-start;
   }
 }
+
+/* Mobil qurilmalar uchun (768px gacha) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .footer-links-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Linklarni 2 ustunga bo'ladi */
+    gap: 32px;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse; /* Copyright pastda, Legal yuqorida */
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footer-legal {
+    width: 100%;
+    justify-content: space-between; /* Privacy va Terms ikki chetga suriladi */
+    gap: 20px;
+  }
+}
+
+/* Juda kichik telefonlar uchun (480px gacha) */
+@media (max-width: 480px) {
+  .footer-links-container {
+    grid-template-columns: 1fr; /* Linklar bir qator bo'lib tushadi */
+  }
+
+  .footer-logo {
+    font-size: 28px;
+  }
+
+  .footer-vision {
+    font-size: 14px;
+    br { display: none; } /* Mobil telefonda matnni majburiy bo'lmasligi uchun <br> ni o'chiramiz */
+  }
+}
+
