@@ -1,4 +1,5 @@
 import Footer from './components/Footer.jsx'
+
 import './App.css'
 import Section2 from './components/Section2.jsx'
 import Navbar from './components/Navbar.jsx'
@@ -16,6 +17,8 @@ function App() {
     <Footer/>
 
     </> 
+  )
+  return ( <h1>firdavs</h1>
   )
 }
 
