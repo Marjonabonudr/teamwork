@@ -1,10 +1,15 @@
 
 import './App.css'
+import Section1 from './components/Section1'
 
 function App() {
 
 
-  return ( <h1>firdavs</h1>
+  
+  return (
+    <>
+        <Section1/>
+    </>
   )
 }
 
